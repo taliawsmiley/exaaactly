@@ -1,0 +1,137 @@
+html {
+	overflow-y: scroll
+}
+
+:root {
+    --bg_0: #ffffff;
+    --bg_1: #ebebeb;
+    --bg_2: #cdcdcd;
+    --dim_0: #878787;
+    --fg_0: #474747;
+    --fg_1: #282828;
+    
+    --red: #d6000c;
+    --green: #1d9700;
+    --yellow: #c49700;
+    --blue: #0064e4;
+    --magenta: #dd0f9d;
+    --cyan: #00ad9c;
+    --orange: #d04a00;
+    --violet: #7f51d6;
+    
+    --br_red: #bf0000;
+    --br_green: #008400;
+    --br_yellow: #af8500;
+    --br_blue: #0054cf;
+    --br_magenta: #c7008b;
+    --br_cyan: #009a8a;
+    --br_orange: #ba3700;
+    --br_violet: #6b40c3;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+        --bg_0: #181818;
+        --bg_1: #252525;
+        --bg_2: #3b3b3b;
+        --dim_0: #777777;
+        --fg_0: #b9b9b9;
+        --fg_1: #dedede;
+        
+        --red: #ed4a46;
+        --green: #70b433;
+        --yellow: #dbb32d;
+        --blue: #368aeb;
+        --magenta: #eb6eb7;
+        --cyan: #3fc5b7;
+        --orange: #e67f43;
+        --violet: #a580e2;
+        
+        --br_red: #ff5e56;
+        --br_green: #83c746;
+        --br_yellow: #efc541;
+        --br_blue: #4f9cfe;
+        --br_magenta: #ff81ca;
+        --br_cyan: #56d8c9;
+        --br_orange: #fa9153;
+        --br_violet: #b891f5;
+	}
+}
+
+body {
+	max-width: 800px;
+	margin: 40px auto;
+	padding: 0 10px;
+	font: 14px/1.5 monospace;
+	color: var(--fg_0);
+	background: var(--bg_0)
+}
+
+a:link {
+	color: var(--blue)
+}
+
+a:hover {
+	color: var(--cyan)
+}
+
+a:visited {
+	color: var(--violet)
+}
+
+a:active {
+	color: var(--violet)
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.2
+}
+
+p>code {
+	color: var(--fg_0);
+	background: var(--bg_1);
+	padding: 2px
+}
+
+code {
+	color: var(--fg_0);
+	background: var(--bg_1);
+	padding: 2px
+}
+
+pre {
+	color: var(--fg_0);
+	background: var(--bg_1);
+	padding: 24px;
+	overflow-x: auto
+}
+
+article {
+	padding: 24px 0
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+figcaption {
+	color: var(--dim_0);
+	font: 12px/1.5 monospace;
+	text-align: center;
+}
+
+figure {
+	margin: auto
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: auto
+}
