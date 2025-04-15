@@ -15,7 +15,6 @@
 	<meta charset="utf-8">
 </head>
 <body>
-{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
 <main>
 {{ block "header" . }}
 {{ partial "header.html" . }}
@@ -24,8 +23,6 @@
 {{ block "main" . }}
 {{ .Content }}
 {{ end }}
-{{ if .Param "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}}
-{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
 </article>
 </main>
 {{ block "footer" . }}
