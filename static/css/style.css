@@ -135,3 +135,13 @@ img {
 	height: auto;
 	margin: auto
 }
+
+hr {
+    border-style: dotted none none;
+    border-width: 4px;
+    border-color: var(--bg_2);
+}
+
+nav {
+    font: 16px/1.5 monospace;
+}

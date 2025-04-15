@@ -15,10 +15,10 @@
 	<meta charset="utf-8">
 </head>
 <body>
-<main>
 {{ block "header" . }}
 {{ partial "header.html" . }}
 {{ end }}
+<main>
 <article>
 {{ block "main" . }}
 {{ .Content }}
