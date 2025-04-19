@@ -75,12 +75,21 @@ a:hover {
 	color: var(--cyan)
 }
 
-a:visited {
+a:visited,
+a:active {
 	color: var(--violet)
 }
 
-a:active {
-	color: var(--violet)
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
 }
 
 h1,
@@ -106,10 +115,6 @@ pre {
 	background: var(--bg_1);
 	padding: 24px;
 	overflow-x: auto
-}
-
-article {
-	padding: 24px 0
 }
 
 .center {
@@ -145,4 +150,18 @@ hr {
 
 nav {
     font: 16px/1.5 monospace;
+}
+
+header a:link,
+header a:visited,
+header a:hover,
+header a:active {
+    color: var(--fg_0);
+}
+
+.site-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--fg_0);
 }

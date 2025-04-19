@@ -1,5 +1,5 @@
 <header>
-	<h1>{{ .Site.Title }}</h1>
-{{ partial "navigation.html" . }}
-<hr/>
+	<a href="{{ .Site.BaseURL }}" class="site-title">{{ .Site.Title }}</a>
+	{{ partial "navigation.html" . }}
+	<hr/>
 </header>

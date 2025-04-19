@@ -19,11 +19,9 @@
 {{ partial "header.html" . }}
 {{ end }}
 <main>
-<article>
 {{ block "main" . }}
 {{ .Content }}
 {{ end }}
-</article>
 </main>
 {{ block "footer" . }}
 {{ partial "footer.html" . }}
