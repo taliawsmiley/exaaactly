@@ -2,10 +2,17 @@
 	<main>
 		<article>
 			<h1>{{ .Title }}</h1>
-			<i><time>{{ .Date.Format (default "2006-01-02" .Site.Params.dateFmt) }}</time></i>
-		        {{ range .Params.tags }}
-		           <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-        		{{ end }}
+			{{ if .Date }}
+				<i><time>{{ .Date.Format (default "2006-01-02" .Site.Params.dateFmt) }}</time></i>
+			{{ end }}
+			{{ if .Params.series }}
+				<p>
+					<i>Part of a series on:</i>
+					{{ range .Params.series }}
+						<a href="{{ "/series/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+					{{ end }}
+				</p>
+			{{ end }}
 			<div>
 				{{ .Content }}
 			</div>
