@@ -1,0 +1,12 @@
+<div class="summary">
+	{{ with .Params.image }}
+	<img src="{{ . }}" alt="{{ $.Title }}"> 
+	{{ end }}
+	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+	<div>
+		{{ .Summary }}
+		{{ if .Truncated }}
+			<a href="{{ .Permalink }}">Read more...</a>
+		{{ end }}
+	</div>
+</div>
