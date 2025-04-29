@@ -62,7 +62,7 @@ body {
 	max-width: 800px;
 	margin: 40px auto;
 	padding: 0 10px;
-	font: 14px/1.5 monospace;
+	font: 18px/1.5 monospace;
 	color: var(--fg_0);
 	background: var(--bg_0)
 }
@@ -81,15 +81,15 @@ a:active {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 30px;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 h1,
@@ -149,7 +149,7 @@ hr {
 }
 
 nav {
-    font: 16px/1.5 monospace;
+    font: 18px/1.5 monospace;
 }
 
 header a:link,
@@ -160,7 +160,7 @@ header a:active {
 }
 
 .site-title {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: bold;
     text-decoration: none;
     color: var(--fg_0);

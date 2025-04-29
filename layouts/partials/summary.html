@@ -1,7 +1,5 @@
 <div class="summary">
-	{{ with .Params.image }}
-	<img src="{{ . }}" alt="{{ $.Title }}"> 
-	{{ end }}
+	<a href="{{ .Permalink }}"><img src="{{ .Params.image }}" alt="{{ $.Title }}"></a> 
 	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 	<div>
 		{{ .Summary }}
