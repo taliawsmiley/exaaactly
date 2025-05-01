@@ -1,5 +1,7 @@
 <div class="summary">
-	<a href="{{ .Permalink }}"><img src="{{ .Params.image }}" alt="{{ $.Title }}"></a> 
+	{{ if .Params.image }}
+		<a href="{{ .Permalink }}"><img src="{{ .Params.image }}" alt="{{ $.Title }}"></a> 
+	{{ end }}
 	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 	<div>
 		{{ .Summary }}

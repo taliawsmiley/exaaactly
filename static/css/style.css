@@ -139,7 +139,8 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
-	margin: auto
+	margin: auto;
+    border: 1px solid var(--fg_0);
 }
 
 hr {
@@ -152,14 +153,16 @@ nav {
     font: 18px/1.5 monospace;
 }
 
-header a:link,
-header a:visited,
-header a:hover,
-header a:active {
+a.navigation {
     color: var(--fg_0);
+    font-weight: bold;
 }
 
-.site-title {
+a.navigation:hover {
+    text-decoration: none;
+}
+
+a.home-link {
     font-size: 36px;
     font-weight: bold;
     text-decoration: none;
@@ -171,11 +174,25 @@ header a:active {
     border: 1px solid var(--fg_0);
     padding: 10px;
     max-width: 235px;
+    min-width: 235px;
 }
 
-.post-previews {
+.summary-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    margin: 10px 0px;
+}
+
+.pagination {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.pagination a,
+.pagination p {
+    margin: 10px 10px;
 }

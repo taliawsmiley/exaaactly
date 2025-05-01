@@ -1,6 +1,6 @@
 {{ define "main" }}
 	<main>
-        <div class="post-previews">
+        <div class="summary-list">
 		{{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") }}
 		{{ range $paginator.Pages }}
             {{ partial "summary.html" . }}

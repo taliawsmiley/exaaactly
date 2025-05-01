@@ -1,15 +1,23 @@
 {{ define "main" }}
 	<main>
+		{{ if .Params.image }}
+			<div>
+				<img src="{{ .Params.image }}" alt="{{ .Title }}">
+			</div>
+		{{ end }}
 		<article>
 			<h1>{{ .Title }}</h1>
 			{{ if .Date }}
-				<i><time>{{ .Date.Format (default "2006-01-02" .Site.Params.dateFmt) }}</time></i>
+				<p>
+					<i>Published:</i>
+					<time>{{ .Date.Format (default "2006-01-02" .Site.Params.dateFmt) }}</time>
+				</p>
 			{{ end }}
 			{{ if .Params.series }}
 				<p>
 					<i>Part of a series on:</i>
 					{{ range .Params.series }}
-						<a href="{{ "/series/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+						<a href="{{ "/series/" | relLangURL }}{{ . | urlize }}{{ "/" | relLangURL }}">{{ . }}</a>
 					{{ end }}
 				</p>
 			{{ end }}
