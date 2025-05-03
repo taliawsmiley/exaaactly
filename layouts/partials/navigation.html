@@ -2,7 +2,7 @@
     <nav class="center">
         {{ with .Site.Menus.main }}
         {{ range . }}
-        <a href="{{ .URL | relURL }}" class="navigation">{{ .Name }}</a>
+        <a href="{{ .URL | relURL }}" class="internal">{{ .Name }}</a>
         {{ end }}
         {{ end }}
     </nav>

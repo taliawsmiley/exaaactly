@@ -1,17 +1,18 @@
 <div class="pagination">
-    {{ if .Paginator.HasPrev }}
-        <p>
-            <a href="{{ .Paginator.First.URL }}" class="navigation">&lt;&lt; Latest</a>
-            <a href="{{ .Paginator.Prev.URL }}" class="navigation">&lt; Newer</a>
-        </p>
-    {{ end }}
-    <p>
-        {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
-    </p>
-    {{ if .Paginator.HasNext }}
-        <p>
-            <a href="{{ .Paginator.Next.URL }}" class="navigation">Older &gt;</a>
-            <a href="{{ .Paginator.Last.URL }}" class="navigation">First &gt;&gt;</a>
-        </p>
-    {{ end }}
+    <div class="pagination-item">
+        {{ if .Paginator.HasNext }}
+            <p>
+                <a href="{{ .Paginator.Last.URL }}" class="internal">&lt;&lt; First</a>
+                <a href="{{ .Paginator.Next.URL }}" class="internal">&lt; Older</a>
+            </p>
+        {{ end }}
+    </div>
+    <div class="pagination-item">
+        {{ if .Paginator.HasPrev }}
+            <p>
+                <a href="{{ .Paginator.Prev.URL }}" class="internal">Newer &gt;</a>
+                <a href="{{ .Paginator.First.URL }}" class="internal">Latest &gt;&gt;</a>
+            </p>
+        {{ end }}
+    </div>
 </div>

@@ -143,22 +143,30 @@ img {
     border: 1px solid var(--fg_0);
 }
 
-hr {
+header hr,
+footer hr {
     border-style: dotted none none;
     border-width: 4px;
     border-color: var(--bg_2);
+}
+
+main hr {
+    border-style: solid none none;
+    border-width: 2px;
+    border-color: var(--bg_2);
+    width: 60%;
 }
 
 nav {
     font: 18px/1.5 monospace;
 }
 
-a.navigation {
+a.internal {
     color: var(--fg_0);
     font-weight: bold;
 }
 
-a.navigation:hover {
+a.internal:hover {
     text-decoration: none;
 }
 
@@ -187,12 +195,18 @@ a.home-link {
 
 .pagination {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     text-align: center;
-    justify-content: center;
 }
 
-.pagination a,
-.pagination p {
-    margin: 10px 10px;
+.pagination-item {
+    flex: 1;
+    min-width: max-content;
+    box-sizing: border-box;
+}
+
+.pagination-item a,
+.pagination-item p {
+    margin: 10px;
 }
