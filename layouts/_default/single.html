@@ -7,19 +7,32 @@
 		{{ end }}
 		<article>
 			<h1>{{ .Title }}</h1>
+			{{ $displayHR := false }}
 			{{ if .Date }}
+				{{ $displayHR = true }}
 				<p>
 					<i>Published:</i>
 					<time>{{ .Date.Format (default "2006-01-02" .Site.Params.dateFmt) }}</time>
 				</p>
 			{{ end }}
 			{{ if .Params.series }}
+				{{ $displayHR = true }}
 				<p>
 					<i>Part of a series on:</i>
 					{{ range .Params.series }}
 						<a href="{{ "/series/" | relLangURL }}{{ . | urlize }}{{ "/" | relLangURL }}">{{ . }}</a>
 					{{ end }}
 				</p>
+			{{ end }}
+			{{ if .Params.disclaimer }}
+				{{ $displayHR = true }}
+				<p>
+					<i>Disclaimer:</i>
+					{{ .Params.disclaimer }}
+				</p>
+			{{ end }}
+			{{ if $displayHR }}
+				<hr>
 			{{ end }}
 			<div>
 				{{ .Content }}

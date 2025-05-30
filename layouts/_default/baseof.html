@@ -5,7 +5,11 @@
 	<link rel="canonical" href="{{ .Site.BaseURL }}">
 	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
 	<link rel='stylesheet' type='text/css' href='/css/style.css'>
-	{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
+	{{ with .Site.Params.favicon_apple_touch }}<link rel="apple-touch-icon" sizes="180x180" href="{{ . }}">
+	{{ end -}}
+	{{ with .Site.Params.favicon_32x32 }}<link rel="icon" type="image/png" sizes="32x32" href="{{ . }}">
+	{{ end -}}
+	{{ with .Site.Params.favicon_16x16 }}<link rel="icon" type="image/png" sizes="16x16" href="{{ . }}">
 	{{ end -}}
 	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 	<!-- <meta name="keywords" content=""> -->

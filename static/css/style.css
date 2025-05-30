@@ -56,26 +56,39 @@ h1 {
 }
 
 h2 {
+    margin-top: 40px;
     font-size: 28px;
 }
 
 h3 {
-    font-size: 24px;
-}
-
-h4 {
+    margin-top: 24px;
     font-size: 20px;
 }
 
-h5 {
+h4 {
     font-size: 18px;
+    font-style: italic;
+    color: var(--dim_0);
+}
+
+h5 {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--dim_0);
+}
+
+h6 {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--dim_0);
 }
 
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
 	line-height: 1.2
 }
 
@@ -200,4 +213,17 @@ a.home-link {
 .pagination-item a,
 .pagination-item p {
     margin: 10px;
+}
+
+a.footnote-ref,
+a.footnote-backref {
+    text-decoration: none;
+}
+
+a.footnote-ref::before {
+    content: '[';
+}
+
+a.footnote-ref::after {
+    content: ']';
 }
