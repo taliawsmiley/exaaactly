@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}">
 <head>
+	<meta charset="utf-8">
+	<link rel='stylesheet' type='text/css' href='/css/style.css'>
 	<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
 	<link rel="canonical" href="{{ .Site.BaseURL }}">
 	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
-	<link rel='stylesheet' type='text/css' href='/css/style.css'>
 	{{ with .Site.Params.favicon_apple_touch }}<link rel="apple-touch-icon" sizes="180x180" href="{{ . }}">
 	{{ end -}}
 	{{ with .Site.Params.favicon_32x32 }}<link rel="icon" type="image/png" sizes="32x32" href="{{ . }}">
@@ -15,7 +16,6 @@
 	<!-- <meta name="keywords" content=""> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
-	<meta charset="utf-8">
 </head>
 <body>
 {{ block "header" . }}
