@@ -227,3 +227,7 @@ a.footnote-ref::before {
 a.footnote-ref::after {
     content: ']';
 }
+
+sup {
+    line-height: 100%;
+}
